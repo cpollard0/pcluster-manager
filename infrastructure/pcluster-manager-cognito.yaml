@@ -245,7 +245,7 @@ Resources:
     Type: AWS::Cognito::UserPoolGroup
     Properties:
       Description: User group that can view and manage clusters
-      GroupName: admin
+      GroupName: user
       Precedence: 1
       UserPoolId: !Ref CognitoUserPool
 
@@ -253,7 +253,7 @@ Resources:
     Type: AWS::Cognito::UserPoolGroup
     Properties:
       Description: Administrator group that can promote users to be admins.
-      GroupName: user
+      GroupName: admin
       Precedence: 2
       UserPoolId: !Ref CognitoUserPool
 
